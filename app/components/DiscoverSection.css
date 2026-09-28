@@ -289,6 +289,90 @@
   font-weight: 400;
 }
 
+
+/* ═══════════════════════════════════════════════
+   Learning Paths Section
+   ═══════════════════════════════════════════════ */
+
+.learning-paths {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.learning-paths__heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--bs-dark, #1a1a1a);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+.learning-paths__subtitle {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  color: var(--bs-gray, #6b7280);
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 0 3rem;
+}
+
+.learning-paths__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.learning-path-card {
+  background: var(--bs-white, #ffffff);
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 32px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition:
+    box-shadow var(--bs-transition, 0.3s ease),
+    transform var(--bs-transition, 0.3s ease),
+    border-color var(--bs-transition, 0.3s ease);
+}
+
+.learning-path-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.learning-path-card__icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--bs-lime, #c8ff00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.learning-path-card__icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.learning-path-card__name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bs-dark, #1a1a1a);
+}
+
 /* ═══════════════════════════
    Responsive
    ═══════════════════════════ */
@@ -298,6 +382,11 @@
   .course-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
+  }
+
+  .learning-paths__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
   }
 }
 
@@ -329,6 +418,20 @@
     gap: 18px;
     margin-top: 2.5rem;
   }
+
+  .learning-paths {
+    margin-top: 3.5rem;
+  }
+
+  .learning-paths__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .learning-path-card {
+    padding: 24px 12px 18px;
+    border-radius: 16px;
+  }
 }
 
 /* Mobile */
@@ -337,6 +440,11 @@
     grid-template-columns: 1fr;
     gap: 20px;
     max-width: 400px;
+  }
+
+  .learning-paths__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
@@ -358,4 +466,3 @@
     font-size: 0.78rem;
   }
 }
-

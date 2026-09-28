@@ -108,6 +108,15 @@ const COURSES = [
 /* Placeholder avatar colours */
 const AVATAR_COLORS = ["#E8D5B7", "#D4A574", "#8B6F47", "#C4956A"];
 
+const LEARNING_PATHS = [
+  { name: "Design", icon: "/courses/categories/design.png" },
+  { name: "Development", icon: "/courses/categories/development.png" },
+  { name: "IT & Software", icon: "/courses/categories/it&software.png" },
+  { name: "Business", icon: "/courses/categories/business.png" },
+  { name: "Marketing", icon: "/courses/categories/marketing.png" },
+  { name: "Photography", icon: "/courses/categories/photography.png" },
+];
+
 export default function DiscoverSection() {
   const [activeCategory, setActiveCategory] = useState("Featured");
   const [showAll, setShowAll] = useState(false);
@@ -236,6 +245,33 @@ export default function DiscoverSection() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* ── Learning Paths Section ── */}
+        <div className="learning-paths">
+          <h2 className="learning-paths__heading">
+            Explore Diverse Learning Paths at Bytespace
+          </h2>
+          <p className="learning-paths__subtitle">
+            At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.
+          </p>
+
+          <div className="learning-paths__grid">
+            {LEARNING_PATHS.map((path) => (
+              <div key={path.name} className="learning-path-card">
+                <div className="learning-path-card__icon-wrapper">
+                  <Image
+                    src={path.icon}
+                    alt={path.name}
+                    width={28}
+                    height={28}
+                    className="learning-path-card__icon"
+                  />
+                </div>
+                <span className="learning-path-card__name">{path.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
