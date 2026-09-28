@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./components/HeroSection.css";
 @import "./components/LogoBar.css";
+@import "./components/DiscoverSection.css";
 
 :root {
   --background: #ffffff;

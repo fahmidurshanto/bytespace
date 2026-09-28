@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════════
+   DiscoverSection.css — Discover Your Passion
+   ═══════════════════════════════════════════════ */
+
+.discover-section {
+  width: 100%;
+  background: var(--bs-white, #ffffff);
+  padding: 5rem clamp(1rem, 4vw, 3rem) 4rem;
+}
+
+.discover-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── Heading ── */
+.discover-heading {
+  font-size: clamp(1.75rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  color: var(--bs-dark, #1a1a1a);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+}
+
+/* ── Subtitle ── */
+.discover-subtitle {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  color: var(--bs-gray, #6b7280);
+  line-height: 1.75;
+  max-width: 680px;
+  margin: 0 0 2.5rem;
+}
+
+/* ── Tag Cloud ── */
+.discover-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Individual tag pill */
+.discover-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: var(--bs-radius-pill, 100px);
+  border: 1.5px solid #d1d5db;
+  background: transparent;
+  color: var(--bs-dark, #1a1a1a);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background var(--bs-transition, 0.3s ease),
+    border-color var(--bs-transition, 0.3s ease),
+    color var(--bs-transition, 0.3s ease),
+    box-shadow var(--bs-transition, 0.3s ease),
+    transform var(--bs-transition, 0.3s ease);
+}
+
+.discover-tag:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Active / selected tag */
+.discover-tag--active {
+  background: var(--bs-lime, #c8ff00);
+  border-color: var(--bs-lime, #c8ff00);
+  color: var(--bs-dark, #1a1a1a);
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(200, 255, 0, 0.35);
+}
+
+.discover-tag--active:hover {
+  background: var(--bs-lime-hover, #b8ef00);
+  border-color: var(--bs-lime-hover, #b8ef00);
+}
+
+/* "+ More" link-style tag */
+.discover-tag--more {
+  border: none;
+  background: none;
+  color: var(--bs-blue, #1400ff);
+  font-weight: 600;
+  padding: 10px 12px;
+}
+
+.discover-tag--more:hover {
+  background: none;
+  box-shadow: none;
+  text-decoration: underline;
+  transform: none;
+}
+
+/* ═══════════════════════════
+   Responsive
+   ═══════════════════════════ */
+
+@media (max-width: 768px) {
+  .discover-section {
+    padding: 3.5rem 1rem 3rem;
+  }
+
+  .discover-heading {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .discover-subtitle {
+    font-size: 0.88rem;
+    padding: 0 0.5rem;
+  }
+
+  .discover-tags {
+    gap: 10px;
+  }
+
+  .discover-tag {
+    padding: 8px 16px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .discover-section {
+    padding: 3rem 0.75rem 2.5rem;
+  }
+
+  .discover-heading {
+    font-size: 1.4rem;
+  }
+
+  .discover-tags {
+    gap: 8px;
+  }
+
+  .discover-tag {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+  }
+}
