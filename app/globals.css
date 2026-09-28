@@ -2,6 +2,7 @@
 @import "./components/HeroSection.css";
 @import "./components/LogoBar.css";
 @import "./components/DiscoverSection.css";
+@import "./components/GrowthSection.css";
 
 :root {
   --background: #ffffff;
