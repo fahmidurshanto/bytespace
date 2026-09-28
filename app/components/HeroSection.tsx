@@ -33,7 +33,7 @@ export default function HeroSection() {
               </a>
             </li>
             <li>
-              <a href="/courses" className="navbar-link">
+              <a href="#courses" className="navbar-link">
                 Courses
               </a>
             </li>
