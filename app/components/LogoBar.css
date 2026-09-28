@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════
+   LogoBar.css — Partner Logo Strip
+   ═══════════════════════════════════════ */
+
+.logo-bar {
+  width: 100%;
+  background: #efefef;
+  padding: 2.5rem clamp(1rem, 4vw, 3rem);
+}
+
+.logo-bar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.logo-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logo-bar-item:hover {
+  opacity: 0.85;
+}
+
+.logo-bar-icon {
+  flex-shrink: 0;
+}
+
+.logo-bar-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .logo-bar-inner {
+    justify-content: center;
+    gap: 2rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-bar {
+    padding: 2rem 1rem;
+  }
+
+  .logo-bar-inner {
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+  }
+
+  .logo-bar-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-bar-inner {
+    gap: 1.2rem 2rem;
+  }
+
+  .logo-bar-item {
+    gap: 6px;
+  }
+
+  .logo-bar-text {
+    font-size: 0.95rem;
+  }
+
+  .logo-bar-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
