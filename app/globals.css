@@ -3,6 +3,7 @@
 @import "./components/LogoBar.css";
 @import "./components/DiscoverSection.css";
 @import "./components/GrowthSection.css";
+@import "./components/CTASection.css";
 
 :root {
   --background: #ffffff;
