@@ -1,7 +1,9 @@
+import Link from "next/link";
+import "./CTASection.css";
+
 export default function CTASection() {
   return (
     <section id="join-creator" className="cta-section">
-      {/* Dot grid overlay */}
       <div className="cta-grid-overlay" aria-hidden="true" />
 
       {/* ── Decorative 3D Elements ── */}
@@ -52,9 +54,9 @@ export default function CTASection() {
           course on the ByteSpace Course Library.
         </p>
 
-        <a href="/join" className="cta-btn" id="cta-join-creator-btn">
+        <Link href="/register" className="cta-btn" id="cta-join-creator-btn">
           Join as Creator
-        </a>
+        </Link>
       </div>
     </section>
   );
