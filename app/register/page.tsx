@@ -94,11 +94,6 @@ export default function RegisterPage() {
 
         {/* ── Right Side: Register Form ── */}
         <div className="register-form-wrapper">
-          {/* Logo */}
-          <Link href="/" className="register-logo">
-            <span className="register-logo-icon">B</span>
-            <span className="register-logo-text">ByteSpace</span>
-          </Link>
 
           <div className="register-form-box">
             <h1 className="register-title">Create your Account</h1>

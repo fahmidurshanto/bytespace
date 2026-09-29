@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -46,12 +47,12 @@ export default function HeroSection() {
 
           {/* Right Actions */}
           <div className="navbar-actions">
-            <a href="/signin" className="navbar-action-link">
+            <Link href="/register" className="navbar-action-link">
               Sign In
-            </a>
-            <a href="/join" className="navbar-action-link">
+            </Link>
+            <Link href="/register" className="navbar-action-link">
               Join Us
-            </a>
+            </Link>
             <button
               className="navbar-cart"
               aria-label="Shopping cart"
