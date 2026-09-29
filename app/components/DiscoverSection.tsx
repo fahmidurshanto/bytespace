@@ -105,8 +105,16 @@ const COURSES = [
   },
 ];
 
-/* Placeholder avatar colours */
-const AVATAR_COLORS = ["#E8D5B7", "#D4A574", "#8B6F47", "#C4956A"];
+/* Avatar images for course cards */
+const AVATAR_IMAGES = [
+  "/avatars/avatar_1.png",
+  "/avatars/avatar_2.png",
+  "/avatars/avatar_3.png",
+  "/avatars/avatar_4.png",
+  "/avatars/avatar_5.png",
+  "/avatars/avatar_6.png",
+  "/avatars/avatar_7.png",
+];
 
 const LEARNING_PATHS = [
   { name: "Design", icon: "/courses/categories/design.png" },
@@ -225,12 +233,12 @@ export default function DiscoverSection() {
                   </div>
                   <div className="course-card__avatars">
                     <div className="course-card__avatar-stack">
-                      {AVATAR_COLORS.map((color, i) => (
-                        <div
-                          key={i}
-                          className="course-card__avatar"
-                          style={{ background: color }}
-                        />
+                      {AVATAR_IMAGES.slice((course.id - 1) % AVATAR_IMAGES.length, (course.id - 1) % AVATAR_IMAGES.length + 4).concat(
+                        AVATAR_IMAGES.slice(0, Math.max(0, 4 - (AVATAR_IMAGES.length - (course.id - 1) % AVATAR_IMAGES.length)))
+                      ).slice(0, 4).map((src, i) => (
+                        <div key={i} className="course-card__avatar">
+                          <img src={src} alt="Student" />
+                        </div>
                       ))}
                     </div>
                     <span className="course-card__avatar-count">{course.students}</span>

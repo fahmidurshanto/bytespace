@@ -154,10 +154,18 @@ export default function GrowthSection() {
               </div>
               <div className="float-students-avatars">
                 <div className="avatar-stack">
-                  <div className="avatar" style={{ background: "#E8D5B7" }} />
-                  <div className="avatar" style={{ background: "#D4A574" }} />
-                  <div className="avatar" style={{ background: "#8B6F47" }} />
-                  <div className="avatar" style={{ background: "#C4956A" }} />
+                  <div className="avatar">
+                    <img src="/avatars/avatar_1.png" alt="Student" />
+                  </div>
+                  <div className="avatar">
+                    <img src="/avatars/avatar_3.png" alt="Student" />
+                  </div>
+                  <div className="avatar">
+                    <img src="/avatars/avatar_5.png" alt="Student" />
+                  </div>
+                  <div className="avatar">
+                    <img src="/avatars/avatar_6.png" alt="Student" />
+                  </div>
                 </div>
                 <span className="avatar-badge">2K+</span>
               </div>
