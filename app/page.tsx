@@ -3,6 +3,7 @@ import LogoBar from "./components/LogoBar";
 import DiscoverSection from "./components/DiscoverSection";
 import GrowthSection from "./components/GrowthSection";
 import CTASection from "./components/CTASection";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <DiscoverSection />
       <GrowthSection />
       <CTASection />
+      <TestimonialsSection />
     </>
   );
 }
