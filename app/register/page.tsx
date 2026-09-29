@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import "./register.css";
 
+import Navbar from "../components/Navbar";
+
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -24,6 +26,9 @@ export default function RegisterPage() {
 
   return (
     <main className="register-page">
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", zIndex: 100 }}>
+        <Navbar hideLinks />
+      </div>
       {/* Full-page square grid overlay */}
       <div className="register-page-grid-overlay" aria-hidden="true" />
 
