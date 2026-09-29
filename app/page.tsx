@@ -4,6 +4,7 @@ import DiscoverSection from "./components/DiscoverSection";
 import GrowthSection from "./components/GrowthSection";
 import CTASection from "./components/CTASection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <GrowthSection />
       <CTASection />
       <TestimonialsSection />
+      <Footer />
     </>
   );
 }
