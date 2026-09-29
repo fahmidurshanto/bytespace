@@ -37,60 +37,59 @@
   position: absolute;
 }
 
-/* TOP-LEFT: Lime thick wavy ribbon */
-.cta-shape--ribbon-lime-tl {
+.cta-shape img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* TOP-LEFT: 3D Lime element */
+.cta-element-tl {
   top: -8%;
-  left: -2%;
-  width: clamp(90px, 11vw, 160px);
+  left: -1%;
+  width: clamp(140px, 18vw, 240px);
   animation: float-slow 7s ease-in-out infinite;
 }
 
-/* TOP-LEFT inner: White triple-bump squiggle */
-.cta-shape--squiggle-white-tl {
-  top: 5%;
-  left: 14%;
-  width: clamp(45px, 5vw, 80px);
-  animation: float-gentle 5s ease-in-out infinite 0.4s;
+/* LEFT-CENTER: 3D Cone */
+.cta-cone-l {
+  top: 40%;
+  left: 1%;
+  width: clamp(110px, 14vw, 190px);
+  animation: float-gentle 5s ease-in-out infinite 0.8s;
 }
 
-/* LEFT-CENTER: White cone */
-.cta-shape--cone-white-l {
-  top: 50%;
-  left: 2%;
-  width: clamp(55px, 7vw, 105px);
-  transform: translateY(-50%) rotate(10deg);
-  animation: float-gentle 6s ease-in-out infinite 1s;
-}
-
-/* BOTTOM-LEFT: Lime thick C arc */
-.cta-shape--arc-lime-bl {
+/* BOTTOM-LEFT: 3D Ellipse ring */
+.cta-ellipse-bl {
   bottom: -12%;
-  left: 2%;
-  width: clamp(110px, 14vw, 200px);
+  left: -1%;
+  width: clamp(150px, 20vw, 270px);
   animation: float-slow 8s ease-in-out infinite 1.5s;
 }
 
-/* TOP-RIGHT: Lime solid triangle */
-.cta-shape--triangle-lime-tr {
-  top: 6%;
-  right: 17%;
-  width: clamp(55px, 8vw, 115px);
-  animation: float-gentle 5s ease-in-out infinite 0.7s;
+/* TOP-RIGHT: 3D Lime element 2 */
+.cta-element-tr {
+  top: 4%;
+  right: 14%;
+  width: clamp(110px, 13vw, 180px);
+  animation: float-gentle 5s ease-in-out infinite 0.4s;
 }
 
-/* RIGHT: White tall capsule */
-.cta-shape--capsule-white-r {
+/* RIGHT-CENTER: 3D Cone 2 */
+.cta-cone-r {
   top: 5%;
   right: 1%;
-  width: clamp(40px, 5vw, 70px);
-  animation: float-gentle 6s ease-in-out infinite 0.2s;
+  width: clamp(95px, 12vw, 160px);
+  animation: float-slow 6s ease-in-out infinite 1.2s;
 }
 
-/* BOTTOM-RIGHT: Lime S squiggle */
-.cta-shape--squiggle-lime-br {
-  bottom: 5%;
-  right: 3%;
-  width: clamp(55px, 7vw, 100px);
+/* BOTTOM-RIGHT: 3D Lime element 3 */
+.cta-element-br {
+  bottom: 2%;
+  right: 1%;
+  width: clamp(120px, 15vw, 210px);
   animation: float-gentle 5s ease-in-out infinite 1.8s;
 }
 

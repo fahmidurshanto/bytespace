@@ -103,42 +103,25 @@ export default function HeroSection() {
 
         {/* Decorative elements */}
         <div className="hero-decorations" aria-hidden="true">
-          {/* Top-left lime hand/splash */}
-          <div className="deco deco-hand-left">
-            <svg viewBox="0 0 180 200" fill="#C8FF00">
-              <path d="M10,100 Q30,20 60,60 Q70,30 90,50 Q100,10 120,50 Q140,20 150,70 Q170,40 170,100 Q170,180 90,190 Q10,180 10,100Z" />
-            </svg>
+          {/* Main top-left 3D element */}
+          <div className="deco deco-element-1">
+            <img src="/elements/element.png" alt="" />
           </div>
-          {/* Top-right lime hand/splash */}
-          <div className="deco deco-hand-right">
-            <svg viewBox="0 0 180 200" fill="#C8FF00">
-              <path d="M170,100 Q150,20 120,60 Q110,30 90,50 Q80,10 60,50 Q40,20 30,70 Q10,40 10,100 Q10,180 90,190 Q170,180 170,100Z" />
-            </svg>
+          {/* Top-right 3D element */}
+          <div className="deco deco-element-2">
+            <img src="/elements/element_2.png" alt="" />
           </div>
-          {/* White squiggle left */}
-          <div className="deco deco-squiggle-left">
-            <svg viewBox="0 0 60 80" fill="none" stroke="white" strokeWidth="6" strokeLinecap="round">
-              <path d="M30,10 Q10,25 30,40 Q50,55 30,70" />
-            </svg>
+          {/* Mid-right 3D element */}
+          <div className="deco deco-element-3">
+            <img src="/elements/element_3.png" alt="" />
           </div>
-          {/* White squiggle right */}
-          <div className="deco deco-squiggle-right">
-            <svg viewBox="0 0 60 80" fill="none" stroke="white" strokeWidth="6" strokeLinecap="round">
-              <path d="M30,10 Q10,25 30,40 Q50,55 30,70" />
-            </svg>
+          {/* Floating 3D Cone right */}
+          <div className="deco deco-cone-right">
+            <img src="/elements/cone_1.png" alt="" />
           </div>
-          {/* White 3D ring */}
-          <div className="deco deco-ring">
-            <svg viewBox="0 0 120 120" fill="none" stroke="white" strokeWidth="10">
-              <ellipse cx="60" cy="60" rx="50" ry="50" />
-              <ellipse cx="60" cy="60" rx="28" ry="28" />
-            </svg>
-          </div>
-          {/* White triangle */}
-          <div className="deco deco-triangle">
-            <svg viewBox="0 0 60 60" fill="white">
-              <polygon points="10,50 50,50 30,10" />
-            </svg>
+          {/* Floating 3D Ellipse ring */}
+          <div className="deco deco-ellipse">
+            <img src="/elements/Ellipse.png" alt="" />
           </div>
         </div>
 
@@ -187,8 +170,15 @@ export default function HeroSection() {
 
         {/* Hero image area */}
         <div className="hero-image-area">
-          {/* Lime green blob behind the person */}
-          <div className="hero-blob" aria-hidden="true" />
+          {/* Lime 3D Ellipse behind the person */}
+          <div className="hero-blob-wrapper" aria-hidden="true">
+            <img src="/elements/Ellipse.png" alt="" className="hero-blob-ellipse" />
+          </div>
+
+          {/* 3D Cone floating in front of the Ellipse backdrop */}
+          <div className="hero-cone-floating" aria-hidden="true">
+            <img src="/elements/Cone.png" alt="" />
+          </div>
 
           {/* Person image */}
           <div className="hero-person">

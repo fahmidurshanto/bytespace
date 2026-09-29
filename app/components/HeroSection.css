@@ -162,9 +162,9 @@
   width: 100vw;
   height: 100%;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 80px 80px;
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
 }
@@ -184,52 +184,47 @@
   position: absolute;
 }
 
-.deco-hand-left {
-  top: 10%;
-  left: -1%;
-  width: clamp(80px, 12vw, 180px);
-  transform: rotate(15deg);
+.deco img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+.deco-element-1 {
+  top: 5%;
+  left: 1%;
+  width: clamp(150px, 20vw, 260px);
   animation: float-slow 6s ease-in-out infinite;
 }
 
-.deco-hand-right {
-  top: 5%;
-  right: -1%;
-  width: clamp(80px, 12vw, 180px);
-  transform: rotate(-10deg);
+.deco-element-2 {
+  top: 3%;
+  right: 2%;
+  width: clamp(130px, 18vw, 240px);
   animation: float-slow 6s ease-in-out infinite 1s;
 }
 
-.deco-squiggle-left {
-  top: 35%;
-  left: 8%;
-  width: clamp(30px, 4vw, 60px);
-  opacity: 0.7;
-  animation: float-gentle 4s ease-in-out infinite;
+.deco-element-3 {
+  top: 45%;
+  right: 3%;
+  width: clamp(110px, 15vw, 200px);
+  animation: float-gentle 5s ease-in-out infinite 1.5s;
 }
 
-.deco-squiggle-right {
-  bottom: 25%;
+.deco-cone-right {
+  bottom: 20%;
   right: 5%;
-  width: clamp(30px, 4vw, 60px);
-  opacity: 0.7;
+  width: clamp(90px, 12vw, 160px);
   animation: float-gentle 4s ease-in-out infinite 2s;
 }
 
-.deco-ring {
-  bottom: 15%;
+.deco-ellipse {
+  bottom: 10%;
   left: 2%;
-  width: clamp(60px, 9vw, 130px);
-  opacity: 0.5;
-  animation: spin-slow 20s linear infinite;
-}
-
-.deco-triangle {
-  top: 45%;
-  right: 10%;
-  width: clamp(30px, 4vw, 55px);
-  opacity: 0.6;
-  animation: float-gentle 5s ease-in-out infinite 1.5s;
+  width: clamp(120px, 16vw, 220px);
+  animation: spin-slow 25s linear infinite, float-slow 7s ease-in-out infinite;
 }
 
 /* ── Headline ── */
@@ -338,16 +333,47 @@
   margin: 0 auto;
 }
 
-/* Lime blob */
-.hero-blob {
+/* 3D Ellipse element behind student */
+.hero-blob-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: -5%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  height: 75%;
-  background: var(--bs-lime);
-  border-radius: 50% 50% 0 0;
+  transform: translateX(-50%) scale(1.25);
+  transform-origin: bottom center;
+  width: 115%;
+  height: 105%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-blob-ellipse {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* Floating 3D Cone in front of the Ellipse backdrop */
+.hero-cone-floating {
+  position: absolute;
+  top: 8%;
+  left: -14%;
+  width: clamp(180px, 30%, 320px);
+  z-index: 3;
+  pointer-events: none;
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.hero-cone-floating img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.45));
 }
 
 /* Person image — overlaps the full area */
