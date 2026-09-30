@@ -37,7 +37,7 @@ export default function Navbar({ hideLinks = false }: NavbarProps) {
               </Link>
             </li>
             <li>
-              <Link href="/#courses" className="navbar-link">
+              <Link href="/search" className="navbar-link">
                 Courses
               </Link>
             </li>
