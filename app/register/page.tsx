@@ -108,7 +108,7 @@ export default function RegisterPage() {
               <div className="register-success">
                 <div className="success-icon">✓</div>
                 <h3>Account Created Successfully!</h3>
-                <p>Welcome to ByteSpace, {formData.fullName || "Creator"}! Check your email to verify your account.</p>
+                <p>Welcome to ByteSpace, {formData.firstName || "Creator"}! Check your email to verify your account.</p>
                 <Link href="/" className="btn-return-home">
                   Return to Home
                 </Link>
