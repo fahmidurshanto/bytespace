@@ -1,0 +1,13 @@
+.grid-background-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #0631F8; /* vibrant blue */
+  /* Grid pattern overlay */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 150px 150px; /* Size of grid squares */
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+}

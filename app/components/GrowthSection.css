@@ -1,0 +1,495 @@
+/* ═══════════════════════════════════════════════
+   GrowthSection.css — Frame 15 Showcase Section
+   ═══════════════════════════════════════════════ */
+
+.growth-section {
+  position: relative;
+  width: 100%;
+  background-color: #fcfdfe;
+  background-image:
+    /* Top-right subtle lime/yellow glow */
+    radial-gradient(circle at 85% 15%, rgba(200, 255, 0, 0.22) 0%, rgba(200, 255, 0, 0.04) 40%, transparent 65%),
+    /* Bottom-left lime glow */
+    radial-gradient(circle at 10% 80%, rgba(200, 255, 0, 0.32) 0%, rgba(200, 255, 0, 0.06) 45%, transparent 70%),
+    /* Top-left & Bottom-right soft periwinkle blue glow */
+    radial-gradient(circle at 5% 10%, rgba(20, 0, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 92% 88%, rgba(20, 0, 255, 0.12) 0%, rgba(20, 0, 255, 0.02) 45%, transparent 65%);
+  padding: 6rem clamp(1rem, 4vw, 3rem);
+  overflow: hidden;
+}
+
+.growth-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+/* ── Section Block ── */
+.growth-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+}
+
+/* ── Text Content ── */
+.growth-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.growth-headline {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--bs-dark, #1a1a1a);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.growth-subtext {
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: var(--bs-gray, #6b7280);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+/* ── Metrics Stats ── */
+.growth-stats {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.growth-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.growth-stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--bs-blue, #1400ff);
+  line-height: 1.1;
+}
+
+.growth-stat-label {
+  font-size: 0.9rem;
+  color: var(--bs-gray, #6b7280);
+  margin-top: 4px;
+}
+
+/* ── Feature Checklist ── */
+.growth-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.growth-check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--bs-dark, #1a1a1a);
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bs-blue, #1400ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   Visual Showcase Elements
+   ═══════════════════════════════════════════════ */
+
+.growth-visual {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Person Cutout Wrapper */
+.growth-person-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 440px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+}
+
+.growth-person-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Floating Cards General */
+.growth-float-card {
+  position: absolute;
+  z-index: 4;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Backdrop Course Card for Block 1 (behind creator) */
+.growth-card-backdrop {
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Below person wrapper (z-index: 3) */
+  opacity: 0.95;
+}
+
+.growth-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.growth-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.growth-card-tags {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.growth-card-tags span {
+  font-size: 0.65rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 3px 7px;
+  border-radius: 6px;
+  color: #374151;
+}
+
+.growth-card-info {
+  margin-top: 12px;
+  padding: 0 4px;
+}
+
+.growth-card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.growth-card-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.growth-card-rating {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.growth-card-rating .star {
+  color: #cbd5e1;
+}
+
+.growth-card-creator {
+  font-size: 0.72rem;
+  color: #6b7280;
+  margin: 2px 0 10px;
+}
+
+.growth-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.growth-card-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.growth-card-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--bs-blue, #1400ff);
+}
+
+.growth-card-price small {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+/* Floating Progress Card */
+.float-progress {
+  top: 18%;
+  right: 0%;
+  min-width: 170px;
+  animation-delay: 1s;
+}
+
+.float-progress-label {
+  font-size: 0.78rem;
+  color: #6b7280;
+  display: block;
+}
+
+.float-progress-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  display: block;
+  margin: 2px 0 6px;
+}
+
+.float-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.float-progress-fill {
+  width: 55%;
+  height: 100%;
+  background: var(--bs-lime, #c8ff00);
+}
+
+/* Blue Floating Cards for Block 2 (Behind Creator 2) */
+.float-revenue {
+  top: 6%;
+  left: 4%;
+  width: 220px;
+  background: var(--bs-blue, #1400ff);
+  color: #ffffff;
+  padding: 16px 20px;
+  z-index: 1; /* Behind person wrapper (z-index: 3) */
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(20, 0, 255, 0.25);
+}
+
+.float-ytd {
+  top: 38%;
+  left: 4%;
+  width: 175px;
+  background: var(--bs-blue, #1400ff);
+  color: #ffffff;
+  padding: 16px 20px;
+  animation-delay: 1.5s;
+  z-index: 1; /* Behind person wrapper (z-index: 3) */
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(20, 0, 255, 0.25);
+}
+
+.float-card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.float-card-date {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+.float-card-amount {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.float-card-bar-mini {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.float-card-bar-fill-mini {
+  width: 60%;
+  height: 100%;
+  background: var(--bs-lime, #c8ff00);
+  border-radius: 2px;
+}
+
+.float-card-pill-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--bs-lime, #c8ff00);
+  color: #1a1a1a;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+/* Floating Happy Students for Block 2 */
+.float-students {
+  bottom: 8%;
+  right: -2%;
+  animation-delay: 0.8s;
+}
+
+.float-students-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.float-students-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 2px 0 8px;
+}
+
+.float-students-count {
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.float-students-avatars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 3D Squiggles */
+.growth-squiggle {
+  position: absolute;
+  z-index: 2;
+  width: 80px;
+  height: 100px;
+}
+
+.squiggle-top {
+  top: 10%;
+  right: 8%;
+  transform: rotate(15deg);
+}
+
+.squiggle-bottom {
+  top: 30%;
+  right: 15%;
+  transform: rotate(-10deg);
+}
+
+/* ═══════════════════════════
+   Responsive Breakpoints
+   ═══════════════════════════ */
+
+@media (max-width: 1024px) {
+  .growth-block {
+    gap: 2rem;
+  }
+
+  .growth-card-backdrop {
+    display: none;
+  }
+}
+
+@media (max-width: 868px) {
+  .growth-container {
+    gap: 5rem;
+  }
+
+  .growth-block {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .growth-block--2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .growth-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .growth-subtext {
+    max-width: 100%;
+  }
+
+  .growth-stats {
+    justify-content: center;
+  }
+
+  .growth-checklist {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .growth-section {
+    padding: 4rem 1rem;
+  }
+
+  .growth-stats {
+    gap: 2rem;
+  }
+
+  .growth-stat-number {
+    font-size: 1.75rem;
+  }
+
+  .float-revenue, .float-ytd {
+    min-width: 130px;
+    padding: 10px 12px;
+  }
+
+  .float-card-amount {
+    font-size: 1.1rem;
+  }
+}
