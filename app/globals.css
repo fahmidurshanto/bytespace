@@ -4,6 +4,7 @@
 @import "./components/DiscoverSection.css";
 @import "./components/GrowthSection.css";
 @import "./components/CTASection.css";
+@import "./components/CreatorHeader.css";
 
 :root {
   --background: #ffffff;
